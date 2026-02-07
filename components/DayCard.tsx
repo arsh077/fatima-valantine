@@ -22,28 +22,48 @@ const DayCard: React.FC<DayCardProps> = ({ day }) => {
       to={unlocked ? `/day/${day.id}` : '#'}
       onClick={handleClick}
       className={`
-        block relative overflow-hidden rounded-xl border p-5 mb-4 transition-all duration-300
-        ${day.isValentine ? 'border-valentine-red shadow-[0_0_15px_rgba(139,0,0,0.3)]' : 'border-[#333]'}
-        ${
-          unlocked
-            ? 'bg-gradient-to-br from-[#1a1a1a] to-[#252525] border-valentine-gold cursor-pointer active:scale-[0.98]'
-            : 'bg-[#1a1a1a] opacity-50 grayscale cursor-not-allowed'
-        }
+        relative block p-6 rounded-2xl transition-all duration-300 transform
+        ${unlocked
+          ? 'bg-white/60 hover:bg-white/80 hover:scale-105 hover:shadow-xl cursor-pointer border-2 border-transparent hover:border-valentine-gold'
+          : 'bg-white/30 opacity-80 cursor-not-allowed grayscale-[0.3]'}
+        backdrop-blur-md shadow-lg border border-white/40
+        group
       `}
     >
-      <div className="relative z-10 text-center sm:text-left">
-        <span className="text-xs text-gray-400 uppercase tracking-widest block mb-1 font-poppins">
-          {day.displayDate}
-        </span>
-        <h2 className="font-playfair text-2xl text-white my-1">
-          {day.title}
-        </h2>
-        <div className="text-sm mt-2 text-valentine-gold font-poppins">
-          {unlocked
-            ? day.statusText.unlocked
-            : `Opens in ${daysLeft} day(s) ${day.statusText.locked}`}
+      <div className="flex justify-between items-center relative z-10">
+        <div>
+          <span className="block text-valentine-red text-xs font-bold tracking-widest uppercase mb-1">
+            {day.displayDate}
+          </span>
+          <h2 className={`text-2xl md:text-3xl font-playfair font-bold mb-2 ${unlocked ? 'text-valentine-white' : 'text-gray-600'}`}>
+            {day.title}
+          </h2>
+          <p className={`text-sm font-poppins ${unlocked ? 'text-rose-700' : 'text-gray-500'} flex items-center gap-2`}>
+            {unlocked ? day.statusText.unlocked : (
+              <>
+                {day.statusText.locked}
+                <span className="text-xs bg-gray-200/50 px-2 py-0.5 rounded-full">
+                  Opens in {daysLeft} day(s)
+                </span>
+              </>
+            )}
+          </p>
+        </div>
+
+        <div className={`
+          text-3xl transform transition-transform duration-500 
+          ${unlocked ? 'group-hover:rotate-12 group-hover:scale-125' : ''}
+        `}>
+          {unlocked ? '💌' : '🔒'}
         </div>
       </div>
+
+      {/* Decorative background element */}
+      {unlocked && (
+        <div className="absolute -right-4 -bottom-4 opacity-10 text-6xl transform rotate-12 pointer-events-none text-rose-500">
+          ❤️
+        </div>
+      )}
     </Link>
   );
 };
