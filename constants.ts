@@ -84,7 +84,9 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Promise Day 🤝',
     messageBody: '"I promise to stand by you, through thick and thin. I promise to love you more with every passing day."',
-    frameCount: 100
+    frameCount: 10,
+    useLocalImages: true,
+    imagePath: '/day5'
   },
   {
     id: 'day6',
@@ -97,7 +99,9 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Hug Day 🤗',
     messageBody: '"Sometimes words are not enough, but a hug says it all. Here is a tight squeeze to let you know how much you mean to me."',
-    frameCount: 100
+    frameCount: 10,
+    useLocalImages: true,
+    imagePath: '/day6'
   },
   {
     id: 'day7',
@@ -110,7 +114,9 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Kiss Day 💋',
     messageBody: '"A kiss is a secret told to the mouth instead of the ear; kisses are the messengers of love and tenderness."',
-    frameCount: 100
+    frameCount: 10,
+    useLocalImages: true,
+    imagePath: '/day7'
   },
   {
     id: 'day8',
@@ -123,7 +129,9 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Valentine\'s Day ❤️',
     messageBody: '"You are my Valentine, today and forever. Thank you for being the most amazing person in my life. I love you endlessly, Fatima."',
-    frameCount: 150,
+    frameCount: 10,
+    useLocalImages: true,
+    imagePath: '/day8',
     isValentine: true
   }
 ];
