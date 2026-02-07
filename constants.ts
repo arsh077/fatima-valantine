@@ -67,9 +67,11 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Teddy Day 🧸',
     messageBody: '"Sending you a big fluffy hug! Even though I am not a teddy bear, I promise to be your soft place to fall and your warmest hug."',
-    frameCount: 10,
+    frameCount: 80,
     useLocalImages: true,
-    imagePath: '/day4'
+    imagePath: '/day4',
+    imagePrefix: 'A_magical_disneystyle_1080p_202602071510_',
+    startIndex: 0
   },
   {
     id: 'day5',
