@@ -18,7 +18,9 @@ export const DAYS_DATA: DayConfig[] = [
     messageBody: '"Fatima, just like a rose unfolds its petals to embrace the sun, my heart opens up every time you smile. You are the most beautiful flower in my garden of life. I love you."',
     frameCount: 96, // Matches the uploaded 96 frames
     useLocalImages: true,
-    imagePath: '/day1'
+    imagePath: '/day1',
+    imagePrefix: 'ezgif-frame-',
+    startIndex: 1
   },
   {
     id: 'day2',
@@ -65,7 +67,9 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Teddy Day 🧸',
     messageBody: '"Sending you a big fluffy hug! Even though I am not a teddy bear, I promise to be your soft place to fall and your warmest hug."',
-    frameCount: 100
+    frameCount: 10,
+    useLocalImages: true,
+    imagePath: '/day4'
   },
   {
     id: 'day5',
