@@ -1,7 +1,7 @@
 import { DayConfig } from './types';
 
 // SET THIS TO TRUE TO TEST ALL PAGES WITHOUT WAITING FOR DATES
-export const DEBUG_UNLOCK_ALL = false;
+export const DEBUG_UNLOCK_ALL = true;
 
 // Define the timeline data
 export const DAYS_DATA: DayConfig[] = [
@@ -84,9 +84,11 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Promise Day 🤝',
     messageBody: '"I promise to stand by you, through thick and thin. I promise to love you more with every passing day."',
-    frameCount: 10,
+    frameCount: 80,
     useLocalImages: true,
-    imagePath: '/day5'
+    imagePath: '/day5',
+    imagePrefix: 'A_slow_emotional_1080p_202602071510_',
+    startIndex: 0
   },
   {
     id: 'day6',
@@ -99,9 +101,11 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Hug Day 🤗',
     messageBody: '"Sometimes words are not enough, but a hug says it all. Here is a tight squeeze to let you know how much you mean to me."',
-    frameCount: 10,
+    frameCount: 80,
     useLocalImages: true,
-    imagePath: '/day6'
+    imagePath: '/day6',
+    imagePrefix: 'A_magical_nature_1080p_202602071510_',
+    startIndex: 0
   },
   {
     id: 'day7',
@@ -114,9 +118,11 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Kiss Day 💋',
     messageBody: '"A kiss is a secret told to the mouth instead of the ear; kisses are the messengers of love and tenderness."',
-    frameCount: 10,
+    frameCount: 80,
     useLocalImages: true,
-    imagePath: '/day7'
+    imagePath: '/day7',
+    imagePrefix: 'A_majestic_slowmotion_1080p_202602071510_',
+    startIndex: 0
   },
   {
     id: 'day8',
@@ -129,9 +135,11 @@ export const DAYS_DATA: DayConfig[] = [
     },
     messageHeader: 'Happy Valentine\'s Day ❤️',
     messageBody: '"You are my Valentine, today and forever. Thank you for being the most amazing person in my life. I love you endlessly, Fatima."',
-    frameCount: 10,
+    frameCount: 80,
     useLocalImages: true,
     imagePath: '/day8',
+    imagePrefix: 'A_majestic_slowmotion_1080p_202602071610_',
+    startIndex: 0,
     isValentine: true
   }
 ];
